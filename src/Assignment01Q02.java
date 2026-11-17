@@ -4,7 +4,16 @@ public class Assignment01Q02 {
         double approxPi = 0;
 
         /////////////////////////////////////////////
-        // TODO: Fill in the Pi approxiamtion here
+        int digits = Integer.parseInt(args[0]);
+        for (int i = 0; i < digits; i++) {
+            double summand = (double)1 / (2 * i + 1);
+            if (i%2==0) {
+                approxPi += summand;
+            } else {
+                approxPi -= summand;
+            }
+        }
+        approxPi *= 4;
         /////////////////////////////////////////////
         /// ...
         
